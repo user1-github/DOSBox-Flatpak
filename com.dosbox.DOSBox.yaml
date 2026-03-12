@@ -12,6 +12,11 @@ finish-args:
   - --share=network
   - --persist=.dosbox
   - --filesystem=xdg-documents
+cleanup:
+  - /include
+  - /lib/pkgconfig
+  - '*.la'
+  - '*.a'
 modules:
 
   - name: glu
