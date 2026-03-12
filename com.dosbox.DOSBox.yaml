@@ -35,3 +35,28 @@ modules:
       - type: archive
         url: https://github.com/libsdl-org/sdl12-compat/releases/download/release-1.2.74/sdl12-compat-1.2.74.tar.gz
         sha256: 86b6cb20387209eb487273834c41424a42c56637635ca6c58722e1031b04bee0
+
+  - name: sdl_net
+    sources:
+      - type: git
+        url: https://github.com/libsdl-org/SDL_net/tree/SDL-1.2.git
+        commit: e2e041b81747bc01b2c5fb3757a082e525e5d25b
+
+  - name: sdl_sound
+    sources:
+      - type: git
+        url: https://github.com/icculus/SDL_sound/tree/stable-1.0.git
+        commit: 3c1cc931b2ea598c553a0b92cda315d191194b5a
+
+  - name: dosbox
+    sources:
+      - type: archive
+        url: https://sourceforge.net/projects/dosbox/files/dosbox/0.74-3/dosbox-0.74-3.tar.gz
+        sha256: c0d13dd7ed2ed363b68de615475781e891cd582e8162b5c3669137502222260a
+      - type: file
+        path: com.dosbox.DOSBox.png
+      - type: file
+        path: com.dosbox.DOSBox.desktop
+    post-install:
+      - install -Dm644 com.dosbox.DOSBox.png -t /app/share/icons/hicolor/256x256/apps
+      - install -Dm644 com.dosbox.DOSBox.desktop -t /app/share/applications
