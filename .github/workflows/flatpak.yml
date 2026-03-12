@@ -10,8 +10,10 @@ jobs:
     container:
       image: ghcr.io/flathub-infra/flatpak-github-actions:freedesktop-25.08
       options: --privileged
+    env:
+      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
     steps:
-    - uses: actions/checkout@v4
+    - uses: actions/checkout@v6
     - uses: flatpak/flatpak-github-actions/flatpak-builder@v6
       with:
         bundle: dosbox.flatpak
