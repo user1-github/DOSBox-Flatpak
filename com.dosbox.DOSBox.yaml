@@ -39,13 +39,13 @@ modules:
   - name: sdl_net
     sources:
       - type: git
-        url: https://github.com/libsdl-org/SDL_net/tree/SDL-1.2.git
+        url: https://github.com/libsdl-org/SDL_net.git
         commit: e2e041b81747bc01b2c5fb3757a082e525e5d25b
 
   - name: sdl_sound
     sources:
       - type: git
-        url: https://github.com/icculus/SDL_sound/tree/stable-1.0.git
+        url: https://github.com/icculus/SDL_sound.git
         commit: 3c1cc931b2ea598c553a0b92cda315d191194b5a
 
   - name: dosbox
