@@ -16,6 +16,8 @@ cleanup:
   - /bin/sdl-config
   - /include
   - /lib/pkgconfig
+  - /share/aclocal
+  - /share/man
   - '*.a'
   - '*.la'
 modules:
